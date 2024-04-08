@@ -6,7 +6,6 @@ from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 
-
 cred = credentials.Certificate("credentials.json")
 firebase_admin.initialize_app(cred, {"databaseURL" : "https://goop-tech-default-rtdb.firebaseio.com"})
 
