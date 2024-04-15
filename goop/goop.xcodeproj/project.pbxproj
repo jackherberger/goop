@@ -35,6 +35,9 @@
 		04A0E0682BC3A51800CE97BD /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0E0672BC3A51800CE97BD /* RegisterViewViewModel.swift */; };
 		04A0E06A2BC3A51F00CE97BD /* PostViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0E0692BC3A51F00CE97BD /* PostViewViewModel.swift */; };
 		04A0E06C2BC3A53F00CE97BD /* NewPostViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0E06B2BC3A53F00CE97BD /* NewPostViewViewModel.swift */; };
+		04A0E06E2BC4AA9F00CE97BD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0E06D2BC4AA9F00CE97BD /* HeaderView.swift */; };
+		04C594D22BCCC43500CAD3AB /* GButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C594D12BCCC43500CAD3AB /* GButton.swift */; };
+		04C594D42BCCFC6D00CAD3AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C594D32BCCFC6D00CAD3AB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		04A0E0672BC3A51800CE97BD /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		04A0E0692BC3A51F00CE97BD /* PostViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewViewModel.swift; sourceTree = "<group>"; };
 		04A0E06B2BC3A53F00CE97BD /* NewPostViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewViewModel.swift; sourceTree = "<group>"; };
+		04A0E06D2BC4AA9F00CE97BD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		04C594D12BCCC43500CAD3AB /* GButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButton.swift; sourceTree = "<group>"; };
+		04C594D32BCCFC6D00CAD3AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,8 @@
 				04A0E0552BC3A44800CE97BD /* LoginView.swift */,
 				04A0E0572BC3A45F00CE97BD /* RegisterView.swift */,
 				04A0E0592BC3A48400CE97BD /* PostView.swift */,
+				04A0E06D2BC4AA9F00CE97BD /* HeaderView.swift */,
+				04C594D12BCCC43500CAD3AB /* GButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 			children = (
 				04A0E0162BC39ECB00CE97BD /* Assets.xcassets */,
 				04A0E0122BC39EC900CE97BD /* goopApp.swift */,
+				04C594D32BCCFC6D00CAD3AB /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -359,10 +368,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A0E0562BC3A44800CE97BD /* LoginView.swift in Sources */,
+				04A0E06E2BC4AA9F00CE97BD /* HeaderView.swift in Sources */,
 				04A0E0662BC3A50D00CE97BD /* LoginViewViewModel.swift in Sources */,
 				04A0E0642BC3A4FB00CE97BD /* FeedViewViewModel.swift in Sources */,
 				04A0E0522BC3A42A00CE97BD /* FeedView.swift in Sources */,
 				04A0E06C2BC3A53F00CE97BD /* NewPostViewViewModel.swift in Sources */,
+				04C594D22BCCC43500CAD3AB /* GButton.swift in Sources */,
 				04A0E0602BC3A4EB00CE97BD /* MainViewViewModel.swift in Sources */,
 				04A0E0682BC3A51800CE97BD /* RegisterViewViewModel.swift in Sources */,
 				04A0E05A2BC3A48400CE97BD /* PostView.swift in Sources */,
@@ -371,6 +382,7 @@
 				04A0E0582BC3A45F00CE97BD /* RegisterView.swift in Sources */,
 				04A0E05C2BC3A4AC00CE97BD /* User.swift in Sources */,
 				04A0E0502BC3A41800CE97BD /* ProfileView.swift in Sources */,
+				04C594D42BCCFC6D00CAD3AB /* Extensions.swift in Sources */,
 				04A0E0132BC39EC900CE97BD /* goopApp.swift in Sources */,
 				04A0E0542BC3A44100CE97BD /* NewPostView.swift in Sources */,
 				04A0E05E2BC3A4B600CE97BD /* Post.swift in Sources */,
