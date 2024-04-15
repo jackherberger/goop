@@ -16,6 +16,8 @@ struct NewPostView: View {
             Text("New Blog Post")
                 .font(.system(size: 32))
                 .bold()
+                .offset(y: 10
+                )
             Form {
                 // Title
                 TextField("Title", text: $viewModel.title)
