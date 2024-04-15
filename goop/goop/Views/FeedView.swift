@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct FeedView: View {
+    @StateObject var viewModel = FeedViewViewModel()
+    
+    private let userId: String
+    
+    init(userId: String) {
+        self.userId = userId
+    }
+    
+    
     var body: some View {
-        Text("Your feed looks empty!")
+        NavigationView {
+            VStack {
+            }
+            .navigationTitle("Feed")
+            .toolbar{
+                Button {
+                    // Action
+                    viewModel.showingNewPostView = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $viewModel.showingNewPostView ) {
+                NewPostView()
+            }
+        }
     }
 }
 
 #Preview {
-    FeedView()
+    FeedView(userId: "")
 }

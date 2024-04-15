@@ -7,9 +7,39 @@
 
 import SwiftUI
 
+
 struct NewPostView: View {
+    @StateObject var viewModel = NewPostViewViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("New Blog Post")
+                .font(.system(size: 32))
+                .bold()
+            Form {
+                // Title
+                TextField("Title", text: $viewModel.title)
+
+                // Subtitle
+                TextField("Subtitle", text: $viewModel.subTitle)
+                // Content
+                TextField("What's on your mind",
+                          text: $viewModel.text,
+                          axis: .vertical)
+                            .textFieldStyle(.roundedBorder)
+                            .padding()
+                
+                // Post type button
+                Toggle("Post anonymously", isOn: $viewModel.anon)
+                
+                // Done button
+                GButton(title: "Post",
+                        background: .purple) {
+                    // Save post
+                    viewModel.save()
+                }
+            }
+        }
     }
 }
 

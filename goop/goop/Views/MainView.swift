@@ -13,9 +13,23 @@ struct MainView: View {
     var body: some View {
         if viewModel.isSignedIn, !viewModel.curentUserId.isEmpty {
             // signed in state
-            FeedView()
+            accountView
         } else {
             LoginView()
+        }
+    }
+    
+    @ViewBuilder
+    var accountView: some View {
+        TabView {
+            FeedView(userId: viewModel.curentUserId)
+                .tabItem {
+                    Label("Home", systemImage: "rectangle.and.pencil.and.ellipsis")
+                }
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
         }
     }
 }

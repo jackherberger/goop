@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class FeedViewViewModel: ObservableObject {
+    @Published var showingNewPostView = false
+    
+    init() {}
+    
+    
+}
