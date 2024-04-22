@@ -10,6 +10,7 @@ import SwiftUI
 
 struct NewPostView: View {
     @StateObject var viewModel = NewPostViewViewModel()
+    @Binding var newItemPresented: Bool 
     
     var body: some View {
         VStack {
@@ -38,13 +39,25 @@ struct NewPostView: View {
                 GButton(title: "Post",
                         background: .purple) {
                     // Save post
-                    viewModel.save()
+                    if viewModel.canSave {
+                        viewModel.save()
+                        newItemPresented = false
+                    } else {
+                        viewModel.showAlert = true
+                    }
                 }
+            }
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(title: Text("Error"),
+                      message: Text("Please fill in all fields"))
             }
         }
     }
 }
 
 #Preview {
-    NewPostView()
+    NewPostView(newItemPresented: Binding(get: {
+        return true
+    }, set: {_ in
+    }))
 }

@@ -31,7 +31,8 @@ struct FeedView: View {
                 }
             }
             .sheet(isPresented: $viewModel.showingNewPostView ) {
-                NewPostView()
+                NewPostView(newItemPresented:
+                                $viewModel.showingNewPostView)
             }
         }
     }
