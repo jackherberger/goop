@@ -8,11 +8,42 @@
 import SwiftUI
 
 struct PostView: View {
+    @StateObject var viewModel = PostViewViewModel()
+    
+    let item: postItem
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack (alignment: .leading){
+                Text(item.title)
+                    .bold()
+                    .font(.title)
+                Text(item.subTitle)
+                Text(item.text)
+                    .font(.subheadline)
+                Text("\(Date(timeIntervalSince1970: item.postDate).formatted(date: .abbreviated, time: .shortened))")
+                    .font(.footnote )
+                    .foregroundColor(Color(.secondaryLabel))
+            
+            }
+            
+            Spacer()
+            
+            Button {
+                viewModel.toggleLiked()
+            } label: {
+                Image(systemName: item.isDone ? "heart.fill" : "heart")
+            }
+        }
     }
 }
 
 #Preview {
-    PostView()
+    PostView(item: .init(id: "123",
+                         title: "My post",
+                         subTitle: "My first blog",
+                         postDate: Date().timeIntervalSince1970,
+                         anon: false,
+                         text: "Hello, World!",
+                         isDone: false))
 }

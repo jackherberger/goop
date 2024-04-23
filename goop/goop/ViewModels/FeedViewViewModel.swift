@@ -12,5 +12,9 @@ class FeedViewViewModel: ObservableObject {
     
     init() {}
     
+    func delete(id: String) {
+        
+    }
+    
     
 }

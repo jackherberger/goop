@@ -56,7 +56,7 @@ class NewPostViewViewModel: ObservableObject {
         
         db.collection("users")
             .document(uId)
-            .collection("Posts")
+            .collection("posts")
             .document(newId) 
             .setData(newItem.asDictionary())
         

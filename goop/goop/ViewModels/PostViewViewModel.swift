@@ -10,5 +10,9 @@ import Foundation
 class PostViewViewModel: ObservableObject {
     init() {}
     
+    func toggleLiked() {
+        
+    }
+    
     
 }
